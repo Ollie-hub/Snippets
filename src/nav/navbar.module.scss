@@ -1,0 +1,30 @@
+@import '../../styles/App.css';
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.navul {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    list-style-type: none;
+
+    li a {
+        display: inline-block;
+        color: #fff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 10px 20px;
+        text-decoration: none; 
+    }
+}
+
