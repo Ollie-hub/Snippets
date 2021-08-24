@@ -1,3 +1,14 @@
+html, body {
+  margin: 0; 
+}
+
+#page-wrap {
+  text-align: center;
+  overflow: auto;
+  top: 45%;
+  position: relative;
+}
+
 .App {
   text-align: center;
 }
