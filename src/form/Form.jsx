@@ -18,7 +18,7 @@ export default function Form() {
             body: formData
         }
         try {
-            const url = "https://api.mediehuset.net/snippets/contact"
+            const url = "https://api.mediehuset.net/snippets/contact" //api here 
             fetch(url, options)
                 .then(response => response.json())
                 .then(data => console.log(data))
