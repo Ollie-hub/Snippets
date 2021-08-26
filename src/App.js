@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Browser, Switch, Route, Redirect } from 'react-router-dom';
 import { Navigation } from "./nav/Navbar";
+import Form from "./form/Form";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
 
       <Switch>
         <Route exact path="/forside">
-
+          <Form />
         </Route>
         <Route exact path="/2">
 
