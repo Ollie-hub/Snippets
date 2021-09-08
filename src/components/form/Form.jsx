@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import './form.scss'
 
-export default function Form() {
+const StandardForm = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
 
     const onSubmit = data => {
@@ -10,8 +10,8 @@ export default function Form() {
 
         formData.append('firstName', data.firstname)
         formData.append('lastname', data.lastname)
-        formData.append('', data.zipcode)
-        formData.append('', data.email)
+        formData.append('zipcode', data.zipcode)
+        formData.append('email', data.email)
 
         let options = {
             method: 'POST',
@@ -44,7 +44,7 @@ export default function Form() {
             </div>
             <div className="form-div">
                 <label className="form-label" htmlFor="zipcode">Postnummer:</label>
-                <input className="form-input" type="number" placeholder="Zip code" name="zipcode" {...register('zipcode', { required: true, pattern: /^[0-9]+$/i })} />
+                <input className="form-input" type="text" placeholder="Zip code" name="zipcode" {...register('zipcode', { required: true, minLength: 4, maxLength: 10, pattern: /^[0-9]+$/i })} />
                 {errors.zipcode && <span className="error">Du skal indtaste dit postnummer</span>}
             </div>
             <div className="form-div">
@@ -56,5 +56,8 @@ export default function Form() {
                 <input className="form-submit" type="submit" />
             </div>
         </form>
+
     )
 }
+
+export { StandardForm };

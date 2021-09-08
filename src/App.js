@@ -1,37 +1,19 @@
 import React from "react";
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Navigation } from "./components/nav/Navbar";
+import { AuthProvider } from "./components/login/AuthProvider";
+import { Routes } from "./routes/routes";
 import "./App.css";
-import { BrowserRouter as Browser, Switch, Route, Redirect } from 'react-router-dom';
-import { Navigation } from "./nav/Navbar";
-import Form from "./form/Form";
 
 function App() {
   return (
-    <Browser>
-      <Navigation />
-
-      <Switch>
-        <Route exact path="/forside">
-          <Form />
-        </Route>
-        <Route exact path="/2">
-
-        </Route>
-        <Route exact path="/3">
-
-        </Route>
-        <Route exact path="/4">
-
-        </Route>
-        <Route exact path="/5">
-
-        </Route>
-
-        <Route path="/">
-          <Redirect to="/forside"></Redirect>
-        </Route>
-      </Switch>
-
-    </Browser>
-  )
+    <AuthProvider>
+      <Router>
+        <Navigation />
+        <Routes />
+      </Router>
+    </AuthProvider>
+  );
 }
+
 export default App;

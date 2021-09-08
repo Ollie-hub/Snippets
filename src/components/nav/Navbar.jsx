@@ -5,7 +5,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import './navbar.scss'
 
 
-export function Navigation() {
+const Navigation = () => {
 
   const [open, setOpen] = useState(false);
   const toggleClass = () => {
@@ -19,11 +19,13 @@ export function Navigation() {
         <FontAwesomeIcon icon={faBars} />
       </button>
       <ul className={`nav-ul ${open === true ? 'show' : ''}`}>
-        <li className="link"><Link to="/forside">1</Link></li>
-        <li className="link"><Link to="/2">2</Link></li>
-        <li className="link"><Link to="/3">3</Link></li>
-        <li className="link"><Link to="/4">4</Link></li>
+        <li className="link"><Link to="/FrontPage">Forside</Link></li>
+        <li className="link"><Link to="/Products">Products</Link></li>
+        <li className="link"><Link to="/Form">Form</Link></li>
+        <li className="link"><Link to="/Login">Login</Link></li>
       </ul>
     </nav >
   )
 }
+
+export { Navigation };
