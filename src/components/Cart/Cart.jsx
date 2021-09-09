@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from 'react';
-import { myFetch } from '../../../helpers/helpers'
+import { myFetch } from '../../helpers/fetch'
 import { AuthContext } from '../login/AuthProvider'
 
 const Cart = () => {

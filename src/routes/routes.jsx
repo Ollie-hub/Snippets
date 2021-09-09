@@ -16,12 +16,13 @@ export const Routes = () => {
             <Route path='/Form'>
                 <StandardForm />
             </Route>
-            <Route path="/Login">
-                <Login />
-            </Route>
             <Route path="Cart">
                 <Cart />
             </Route>
+            <Route path="/Login">
+                <Login />
+            </Route>
+
 
 
             <Route path='/' exact>
