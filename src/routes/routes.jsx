@@ -2,6 +2,7 @@ import { Route, Redirect, Switch } from 'react-router-dom'
 import { ProductList } from '../components/products/ProductList'
 import { StandardForm } from '../components/form/Form'
 import { Login } from '../components/login/Login'
+import { Cart } from '../components/Cart/Cart'
 
 export const Routes = () => {
     return (
@@ -18,6 +19,10 @@ export const Routes = () => {
             <Route path="/Login">
                 <Login />
             </Route>
+            <Route path="Cart">
+                <Cart />
+            </Route>
+
 
             <Route path='/' exact>
                 <Redirect to='/Frontpage' />

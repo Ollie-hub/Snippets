@@ -19,9 +19,10 @@ const Navigation = () => {
         <FontAwesomeIcon icon={faBars} />
       </button>
       <ul className={`nav-ul ${open === true ? 'show' : ''}`}>
-        <li className="link"><Link to="/FrontPage">Forside</Link></li>
+        <li className="link"><Link to="/FrontPage">Frontpage</Link></li>
         <li className="link"><Link to="/Products">Products</Link></li>
         <li className="link"><Link to="/Form">Form</Link></li>
+        <li className="link"><Link to="/Cart">Cart</Link></li>
         <li className="link"><Link to="/Login">Login</Link></li>
       </ul>
     </nav >
